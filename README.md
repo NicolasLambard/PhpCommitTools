@@ -18,3 +18,12 @@
 Assurez-vous d'avoir **PHP** installé sur votre machine :  
 ```bash
 php -v
+```
+
+### **2️⃣ Exécution du script**
+Pour exécuter le script `PhpPrepareCommit`, utilisez la commande suivante :  
+```bash
+php PhpPrepareCommit
+```
+
+

@@ -10,7 +10,7 @@
 ✅ **Propose une liste de types de commit** *(feat, fix, docs, style, refactor...)*  
 ✅ **Permet d’indiquer un numéro de ticket** *(ex: BMP-48)*  
 ✅ **Demande un titre et une description détaillée** du commit  
-✅ **Ajoute une option pour marquer un commit comme "Work In Progress" (`wip`)*  
+✅ **Ajoute une option pour marquer un commit comme** "Work In Progress" (`wip`)  
 ✅ **Affiche le message final formaté** avant validation  
 
 ---

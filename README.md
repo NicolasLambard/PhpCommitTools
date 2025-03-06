@@ -1,6 +1,6 @@
-#  BashCommit - Aide pour les commits
+#  PhpCommitTools - Aide pour les commits
 
-`BashCommit` est un **script interactif en PHP** qui vous aide à **rédiger des messages de commit clairs et organisés** en suivant les bonnes pratiques Git.
+`PhpCommitTools` est un **script interactif en PHP** qui vous aide à **rédiger des messages de commit clairs et organisés** en suivant les bonnes pratiques Git.
 
 ## 📌 Fonctionnalités principales
 ✅ **Guide l’utilisateur** dans la rédaction d’un commit bien structuré  

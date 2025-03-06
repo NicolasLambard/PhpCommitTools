@@ -1,5 +1,8 @@
 #  PhpCommitTools - Aide pour les commits
 
+🔗Ce projet a été réalisé en s'inspirant de [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/).
+
+
 `PhpCommitTools` est un **script interactif en PHP** qui vous aide à **rédiger des messages de commit clairs et organisés** en suivant les bonnes pratiques Git.
 
 ## 📌 Fonctionnalités principales

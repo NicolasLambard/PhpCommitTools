@@ -6,34 +6,38 @@ foreach ($options as $index => $opt) {
     echo "$index : $opt\n";
 }
 
-$choix = readline("Choisir numéro: ");
+do {
+    $choix = readline("Choisir numéro: ");
+    if (!isset($options[$choix])) {
+        echo "Option invalide. Veuillez prendre une option valide.\n";
+    }
+} while (!isset($options[$choix]));
 
-if (isset($options[$choix])) {
-    $type = $options[$choix];
-} else {
-    $type = "feat";
-}
+$type = $options[$choix];
 
 $ticket = readline("Ticket (ex : BMP-48) : ");
 $titre = readline("Titre du commit : ");
-$description = readline("Description du commit (ligne 1) : ");
-$description1 = readline("Description du commit (ligne 2) : ");
-$description2 = readline("Description du commit (ligne 3) : ");
+
+$descriptions = [];
+while (true) {
+    $description = readline("Description du commit / ou tapez 'fin' pour terminer : ");
+    if (strtolower($description) === 'fin') {
+        break;
+    }
+    $descriptions[] = $description;
+}
 
 $wip = readline("Le commit est-il en cours (wip) ? oui/non : ");
 $wipOui = (strtolower($wip) === "oui");
 
-system('clear');
+$clear = readline("Voulez-vous clear la console ? oui/non : ");
+if (strtolower($clear) === "oui") {
+    system('clear');
+}
 
-if ($wipOui) {
-    echo "\nwip:([$ticket]) $titre\n";
-    echo $description . "\n";
-    echo $description1 . "\n";
-    echo $description2 . "\n";
-} else {
-    echo "\n$type:([$ticket]) $titre\n";
-    echo $description . "\n";
-    echo $description1 . "\n";
-    echo $description2 . "\n";
+echo "\n" . ($wipOui ? "wip" : $type) . ":([$ticket]) $titre\n";
+
+foreach ($descriptions as $desc) {
+    echo $desc . "\n";
 }
 ?>
